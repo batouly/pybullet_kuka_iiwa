@@ -20,7 +20,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-catkin_install_python(PROGRAMS scripts/server.py scripts/kuka_server_node.py
+catkin_install_python(PROGRAMS scripts/kuka_server_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
