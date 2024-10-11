@@ -29,3 +29,4 @@ docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp:/tmp -v /dev:/dev --name pybulle
     . root/catkin_ws/devel/setup.bash
     roslaunch pybullet_server kuka_server_client.launch
     ```
+![kuka](https://github.com/user-attachments/assets/dc9b3b7f-0458-46f8-9865-385618e16831)
