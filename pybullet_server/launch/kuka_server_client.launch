@@ -1,0 +1,12 @@
+<launch>
+    <rosparam file="$(find pybullet_server)/config/config.yaml" command="load" />
+    <!-- Define arguments with default values -->
+    <arg name="force" default="100" />
+    <!-- Use arguments to set parameters -->
+    <param name="gripper_force" value="$(arg force)" />
+    <!-- Launch the server node -->
+    <node pkg="pybullet_server" type="kuka_server_node.py" name="kuka_server_node" output="screen"/>
+    <rosparam file="$(find pybullet_client)/config/config.yaml" command="load" />
+    <!-- Launch the client node -->
+    <node pkg="pybullet_client" type="client.py" name="kuka_client_node" output="screen"/>
+</launch>

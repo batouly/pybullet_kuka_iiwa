@@ -1,0 +1,4 @@
+target_position_topic: '/target_position_topic'
+gripper_state_topic: '/gripper_state_topic'
+cube_pose_topic: /cube_pose_topic'
+pick_toggle_topic: /pick_toggle_topic'

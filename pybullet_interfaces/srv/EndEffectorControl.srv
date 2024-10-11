@@ -1,0 +1,5 @@
+# EndEffectorControl.srv
+geometry_msgs/Point ee_position
+bool gripper_state
+---
+bool success
