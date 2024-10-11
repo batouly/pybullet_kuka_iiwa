@@ -10,10 +10,10 @@ class KukaClientNode:
         # Initialize the ROS node
         rospy.init_node('kuka_client_node')
         # Node parameters
-        self.target_position_topic = rospy.get_param('/target_position_topic', '/target_position')
-        self.gripper_state_topic = rospy.get_param('/gripper_state_topic', '/gripper_state')
-        self.cube_pose_topic = rospy.get_param('/cube_pose_topic', '/cube_pose')
-        self.pick_toggle_topic = rospy.get_param('/pick_toggle_topic', '/pick_toggle')
+        self.target_position_topic = rospy.get_param('target_position_topic', '/target_position')
+        self.gripper_state_topic = rospy.get_param('gripper_state_topic', '/gripper_state')
+        self.cube_pose_topic = rospy.get_param('cube_pose_topic', '/cube_pose')
+        self.pick_toggle_topic = rospy.get_param('pick_toggle_topic', '/pick_toggle')
         # Set a loop rate
         self.rate = rospy.Rate(10)  # 10 Hz
         self.cube_pose = []

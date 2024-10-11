@@ -15,12 +15,12 @@ class KukaServerNode:
         rospy.init_node('kuka_server_node')
         # Node parameters
         self.gripper_force = rospy.get_param('/gripper_force', 100)
-        self.joint_state_topic = rospy.get_param('/joint_state_topic', '/joint_states')
-        self.target_position_topic = rospy.get_param('/target_position_topic', '/target_position')
-        self.gripper_state_topic = rospy.get_param('/gripper_state_topic', '/gripper_state')
-        self.cube_pose_topic = rospy.get_param('/cube_pose_topic', '/cube_pose')
-        self.pick_toggle_topic = rospy.get_param('/pick_toggle_topic', '/pick_toggle')
-        self.ee_control_service_name = rospy.get_param('/ee_control_service_name', '/ee_control_service')
+        self.joint_state_topic = rospy.get_param('joint_state_topic', '/joint_states')
+        self.target_position_topic = rospy.get_param('target_position_topic', '/target_position')
+        self.gripper_state_topic = rospy.get_param('gripper_state_topic', '/gripper_state')
+        self.cube_pose_topic = rospy.get_param('cube_pose_topic', '/cube_pose')
+        self.pick_toggle_topic = rospy.get_param('pick_toggle_topic', '/pick_toggle')
+        self.ee_control_service_name = rospy.get_param('ee_control_service_name', '/ee_control_service')
 
         # Subscribers
         rospy.Subscriber(self.target_position_topic, Point, self.target_position_callback)
