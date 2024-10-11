@@ -21,7 +21,8 @@ docker build -t ros-noetic .
 ```
 2. Run the Docker container 
 ```
-docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --name pybullet ros-noetic
+xhost +local:docker
+docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp:/tmp -v /dev:/dev --name pybullet ros-noetic
 ```
 3. Launch the server and the client
     ```
